@@ -2,6 +2,5 @@ install: composer install
 language: php
 php:
   - 7.0
-  - hhvm
   - nightly
 script: composer test
