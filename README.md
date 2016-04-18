@@ -1,4 +1,4 @@
-# The IO Monad for PHP. [![Build Status](https://travis-ci.org/i-am-tom/php-fp-io.svg?branch=master)](https://travis-ci.org/i-am-tom/php-fp-io)
+# The IO Monad for PHP. [![Build Status](https://travis-ci.org/php-fp/php-fp-io.svg?branch=master)](https://travis-ci.org/php-fp/php-fp-io)
 
 _The implementation for this looks more object-oriented than I'd have liked, but it satisfies the monad laws nevertheless._
 
