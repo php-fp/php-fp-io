@@ -1,0 +1,26 @@
+{
+    "authors": [
+        {
+            "name": "Tom",
+            "email": "tomjharding@live.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PhpFp\\IO\\": "src/"
+        }
+    },
+    "description": "An implementation of the IO monad in PHP.",
+    "homepage": "http://www.github.com/i-am-tom/php-fp-io",
+    "keywords": ["functional", "monad", "io"],
+    "license": "MIT",
+    "name": "php-fp/php-fp-io",
+    "scripts": {
+        "test": "vendor/bin/phpunit test"
+    },
+    "time": "2016-04-18",
+    "versions": "1.0.0",
+    "require": {
+        "phpunit/phpunit": "^5.3"
+    }
+}
