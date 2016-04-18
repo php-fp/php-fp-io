@@ -11,7 +11,7 @@
         }
     },
     "description": "An implementation of the IO monad in PHP.",
-    "homepage": "http://www.github.com/i-am-tom/php-fp-io",
+    "homepage": "http://www.github.com/php-fp/php-fp-io",
     "keywords": ["functional", "monad", "io"],
     "license": "MIT",
     "name": "php-fp/php-fp-io",
