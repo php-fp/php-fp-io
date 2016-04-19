@@ -5,7 +5,8 @@ namespace PhpFp\IO\Test;
 use PhpFp\IO\IO;
 
 class ChainTest extends \PHPUnit_Framework_TestCase {
-    public function testParameterCount() {
+    public function testParameterCount()
+    {
         $count = (new \ReflectionMethod('PhpFp\IO\IO::chain'))
             ->getNumberOfParameters();
 
@@ -16,15 +17,20 @@ class ChainTest extends \PHPUnit_Framework_TestCase {
         );
     }
 
-    public function testChain() {
-        $getLine = new IO(function () {
+    public function testChain()
+    {
+        $getLine = new IO(function ()
+        {
             return 'Hello, world!';
         });
 
         $putStrLn = function ($str) {
-            return new IO(function () use ($str) {
-                return $str;
-            });
+            return new IO(
+                function () use ($str)
+                {
+                    return $str;
+                }
+            );
         };
 
         return $this->assertEquals(

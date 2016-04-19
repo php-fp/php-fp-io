@@ -4,8 +4,10 @@ namespace PHP\IO\Test;
 
 use PhpFp\IO\IO;
 
-class ConstructTest extends \PHPUnit_Framework_TestCase {
-    public function testParameterCount() {
+class ConstructTest extends \PHPUnit_Framework_TestCase
+{
+    public function testParameterCount()
+    {
         $count = (new \ReflectionClass('PhpFp\IO\IO'))
             ->getConstructor()->getNumberOfParameters();
 
@@ -16,10 +18,14 @@ class ConstructTest extends \PHPUnit_Framework_TestCase {
         );
     }
 
-    public function testConstruct() {
-        $IO = new IO(function () {
-            return 2;
-        });
+    public function testConstruct()
+    {
+        $IO = new IO(
+            function ()
+            {
+                return 2;
+            }
+        );
 
         $this->assertEquals(
             $IO->unsafePerform(),

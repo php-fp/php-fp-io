@@ -4,8 +4,10 @@ namespace PhpFp\IO\Test;
 
 use PhpFp\IO\IO;
 
-class MapTest extends \PHPUnit_Framework_TestCase {
-    public function testParameterCount() {
+class MapTest extends \PHPUnit_Framework_TestCase
+{
+    public function testParameterCount()
+    {
         $count = (new \ReflectionMethod('PhpFp\IO\IO::map'))
             ->getNumberOfParameters();
 
@@ -16,8 +18,10 @@ class MapTest extends \PHPUnit_Framework_TestCase {
         );
     }
 
-    public function testMap() {
-        $mapper = function ($x) {
+    public function testMap()
+    {
+        $mapper = function ($x)
+        {
             return $x + 2;
         };
 

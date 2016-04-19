@@ -4,8 +4,10 @@ namespace PhpFp\IO\Test;
 
 use PhpFp\IO\IO;
 
-class OfTest extends \PHPUnit_Framework_TestCase {
-    public function testParameterCount() {
+class OfTest extends \PHPUnit_Framework_TestCase
+{
+    public function testParameterCount()
+    {
         $count = (new \ReflectionMethod('PhpFp\IO\IO::of'))
             ->getNumberOfParameters();
 
@@ -16,7 +18,8 @@ class OfTest extends \PHPUnit_Framework_TestCase {
         );
     }
 
-    public function testApplicativeConstructor() {
+    public function testApplicativeConstructor()
+    {
         $this->assertEquals(
             IO::of(2)->unsafePerform(),
             2,

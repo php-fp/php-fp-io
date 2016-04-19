@@ -88,7 +88,7 @@ use PhpFp\IO\IO;
         });
     };
 
-// This function reads a line from STDIN, and prints it to STDOUT.
+// This IO reads a line from STDIN, and prints it to STDOUT.
 return $getLine->chain($putStrLn); // ->unsafePerform() to run.
 ```
 

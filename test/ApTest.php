@@ -4,8 +4,10 @@ namespace PHP\IO\Test;
 
 use PhpFp\IO\IO;
 
-class ApTest extends \PHPUnit_Framework_TestCase {
-    public function testParameterCount() {
+class ApTest extends \PHPUnit_Framework_TestCase
+{
+    public function testParameterCount()
+    {
         $count = (new \ReflectionMethod('PhpFp\IO\IO::ap'))
             ->getNumberOfParameters();
 
@@ -16,9 +18,12 @@ class ApTest extends \PHPUnit_Framework_TestCase {
         );
     }
 
-    public function testAp() {
-        $add = function ($x) {
-            return function ($y) use ($x) {
+    public function testAp()
+    {
+        $add = function ($x)
+        {
+            return function ($y) use ($x)
+            {
                 return $x + $y;
             };
         };
