@@ -59,7 +59,12 @@ use PhpFp\IO\IO;
 $x = IO::of(2);
 
 // With the OOP constructor.
-$y = new IO(function () { return 2; });
+$y = new IO(
+    function ()
+    {
+        return 2;
+    }
+);
 
 // The result of both is the same - the former is neater.
 assert($x->unsafePerform() == $y->unsafePerform());
@@ -77,15 +82,22 @@ This is the equivalent of Haskell's >>= (bind) operation for this IO implementat
 use PhpFp\IO\IO;
 
 //+ $getLine :: IO String
-    $getLine = new IO(function () {
-        return fgets(STDIN);
-    });
+    $getLine = new IO(
+        function ()
+        {
+            return fgets(STDIN);
+        }
+    );
 
 //+ $putStrLn :: String -> IO ()
-    $putStrLn = function ($str) {
-        return new IO(function () use ($str) {
-            echo $str; // Newline picked up by fgets
-        });
+    $putStrLn = function ($str)
+    {
+        return new IO(
+            function () use ($str)
+            {
+                echo $str; // Newline picked up by fgets
+            }
+        );
     };
 
 // This IO reads a line from STDIN, and prints it to STDOUT.
@@ -101,7 +113,8 @@ This is the usual functor mapping, though the implementation is derived from `ch
 
 use PhpFp\IO\IO;
 
-$mapper = function ($x) {
+$mapper = function ($x)
+{
     return $x + 2;
 };
 
@@ -115,8 +128,10 @@ Apply an IO-wrapped argument to this IO-wrapped function. The implementation of 
 ```php
 <?php
 
-$add = function ($x) {
-    return function ($y) use ($x) {
+$add = function ($x)
+{
+    return function ($y) use ($x)
+    {
         return $x + $y;
     };
 };
